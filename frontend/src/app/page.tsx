@@ -1,10 +1,7 @@
 'use client'
 import { MercadoPagoItem } from '@/types'
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
 
 export default function Home() {
-  const [preferenceId, setPreferenceId] = useState<string | null>(null);
   const PORT = process.env.NEXT_PUBLIC_API_URL
   const MP_REDIRECT_URL = process.env.NEXT_PUBLIC_MP_REDIRECT_URL
 

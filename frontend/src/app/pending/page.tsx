@@ -1,7 +1,9 @@
-export const Pending = ()=>{
+ const Pending = ()=>{
     return (
         <div>
             <h1>Compra pendiente</h1>
         </div>
     )
 }
+
+export default Pending
