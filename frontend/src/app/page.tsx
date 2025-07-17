@@ -1,5 +1,6 @@
 'use client'
 import { MercadoPagoItem } from '@/types'
+import Image from 'next/image'
 
 export default function Home() {
   const PORT = process.env.NEXT_PUBLIC_API_URL
@@ -9,7 +10,7 @@ export default function Home() {
     id: "1",
     title: "Porta Espiral",
     description: "Hecho en ceramica, perfecto para interiores",
-  //  picture_url: "/images/portaEspiral.jpg", comente esta linea por que como el back esta en render y la imagen en local, hasta que no haya deployado esta parte la peticion de preferencia de id, me da error 500 
+  picture_url: "/images/portaEspiral.jpg", 
     category_id: "artesanias en ceramica",
     quantity: 1,
     currency_id: "ARS",
@@ -55,7 +56,7 @@ try {
   <div>
     <h2>{item.title}</h2>
     <p>{item.description}</p>
-    {/*<Image src={item.picture_url} alt={item.title} width={200} height={200} />*/}
+    <Image src={item.picture_url} alt={item.title} width={200} height={200} />
     <p>{item.unit_price}</p>
     <p>{item.quantity}</p>
     <button
