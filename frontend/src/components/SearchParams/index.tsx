@@ -14,9 +14,9 @@ export const SearchParams = ( {title, description}:SearchParamsProps)=>{
         <div>
             <h1>{title}</h1>
             <h2>{description}</h2>
-            <p>ID del pago: {paymentId}</p>
-            <p>Estado: {status}</p>
-            <p>Orden: {merchandtOrderId}</p>
+            { paymentId && <p>ID del pago: {paymentId}</p>}
+            { status && <p>Estado: {status}</p>}
+            { merchandtOrderId && <p>Orden: {merchandtOrderId}</p>}
         </div>
     )
 }
