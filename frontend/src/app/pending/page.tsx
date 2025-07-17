@@ -1,9 +1,16 @@
- const Pending = ()=>{
-    return (
-        <div>
-            <h1>Compra pendiente</h1>
-        </div>
-    )
-}
+'use client'
+import { Suspense } from "react";
+import { SearchParams } from "../../components/SearchParams";
 
-export default Pending
+const Pending = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SearchParams
+        title="Compra pendiente"
+        description="Estamos procesando tu compra"
+      />
+    </Suspense>
+  );
+};
+
+export default Pending;

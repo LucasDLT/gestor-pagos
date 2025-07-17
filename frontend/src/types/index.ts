@@ -8,3 +8,8 @@ export interface MercadoPagoItem {
   currency_id?: string;
   unit_price: number;
 }
+
+export interface SearchParamsProps{
+    title: string,
+    description: string
+}
