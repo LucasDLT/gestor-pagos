@@ -19,6 +19,7 @@ const Pending = () => {
       <SearchParams
         title="Compra pendiente"
         description="Estamos procesando tu compra"
+        status="pending"
       />
     </Suspense>
   );
