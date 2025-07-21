@@ -12,5 +12,6 @@ export interface MercadoPagoItem {
 export interface SearchParamsProps{
     title: string,
     description: string,
-    className?: string
+    className?: string,
+    status: "success" | "failure" | "pending";
 }

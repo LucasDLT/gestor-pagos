@@ -1,16 +1,14 @@
 'use client'
 import { useSearchParams } from "next/navigation"
 import { SearchParamsProps } from "@/types";
-import { useParams } from "next/navigation";
 import clsx from "clsx";
 
-export const SearchParams = ( {title, description, className}:SearchParamsProps)=>{
+export const SearchParams = ( {title, description, className, status}:SearchParamsProps)=>{
     const searchParams = useSearchParams();
     //capturamos las siguientes query y las guardo en las constantes
     const paymentId = searchParams.get('payment_id');
     const merchandtOrderId = searchParams.get('merchant_order_id')
-    const params = useParams();
-    const status = params?.status as string // con esta combinacion que buscamos, podemos acceder a la informacion que queremos de la url
+
     const styles = clsx(
         "p-6 rounded-md shadow-md",
         className,

@@ -20,7 +20,7 @@ const Success = () => {
  
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <SearchParams title="Compra exitosa" description="Gracias por tu compra" />
+      <SearchParams title="Compra exitosa" description="Gracias por tu compra" status="success" />
     </Suspense>
   )
 }
