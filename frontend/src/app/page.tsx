@@ -9,8 +9,8 @@ export default function Home() {
   const item: MercadoPagoItem = {
     id: "1",
     title: "Porta Espiral",
-    description: "Hecho en ceramica, perfecto para interiores",
-  picture_url: "/images/portaEspiral.jpg", 
+    description: "Hecho en ceramica",
+    picture_url: "/images/portaEspiral.jpg", 
     category_id: "artesanias en ceramica",
     quantity: 1,
     currency_id: "ARS",
@@ -51,16 +51,17 @@ try {
 */}
 }
   return (
-<main>
-  <h1>Prueba mercado pago</h1>
-  <div>
-    <h2>{item.title}</h2>
-    <p>{item.description}</p>
+<main className='flex flex-col justify-center items-center bg-gradient-to-r from-cyan-500/5 via-blue-500 h-[80vh]'>
+  <h1 className='text-3xl font-bold mb-4 p-2'>PRUEBA MERCADO PAGO SDK V.2</h1>
+  <h2 className='text-3xl font-bold mb-4 p-2'>CHECKOUT PRO</h2>
+  <div className='border border-blue-950 flex flex-col justify-center items-center rounded m-1 p-1'>
+    <h2 className='uppercase'>{item.title}</h2>
+    <p className='uppercase' >{item.description}</p>
     <Image src={item.picture_url} alt={item.title} width={200} height={200} />
-    <p>{item.unit_price}</p>
+    <p>$ {item.unit_price}</p>
     <p>{item.quantity}</p>
     <button
-    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hover:cursor-pointer'
+    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hover:cursor-pointer transition-all duration-750 ease-in-out'
     onClick={handleButton}
     >pagar con mercadopago</button>
   </div>

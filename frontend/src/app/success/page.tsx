@@ -9,7 +9,7 @@ const Success = () => {
 
     const router = useRouter();
 
-    useEffect(() => {
+ useEffect(() => {
 
        const timer = setTimeout(() => {
             router.push("/");
@@ -17,6 +17,7 @@ const Success = () => {
 
         return () => clearTimeout(timer);
     })
+ 
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <SearchParams title="Compra exitosa" description="Gracias por tu compra" />
